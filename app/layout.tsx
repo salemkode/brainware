@@ -1,33 +1,26 @@
 import TopNav from "@/components/TopNav";
 import "./global.css";
-import { Archivo_Black, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Archivo_Black, Space_Grotesk, Space_Mono, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Metadata } from "next";
-import { Toaster } from "@/components/retroui";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
-const sans = Space_Grotesk({
-  subsets: ["latin"],
-  weight: "400",
+const sans = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   variable: "--font-sans",
-  display: "swap",
-});
+})
 
-const head = Archivo_Black({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-head",
-  display: "swap",
-});
-
-const mono = Space_Mono({
-  subsets: ["latin"],
-  weight: "400",
+const mono = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   variable: "--font-mono",
-  display: "swap",
-});
+})
 
+const ibm = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-head",
+})
 export const metadata: Metadata = {
   title: "Retro Styled React UI Library | Retro UI",
   description:
@@ -64,22 +57,14 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="97dd6182-c656-4265-97e0-ee9613b88078"
-        />
       </head>
       <body
-        className={`${head.variable} ${sans.variable} ${mono.variable} bg-background text-foreground`}
+        className={`${ibm.variable} ${sans.variable} ${mono.variable} ${ibm.className} bg-background text-foreground`}
       >
         <ThemeProvider>
           <TopNav />
           {children}
-          <Toaster />
         </ThemeProvider>
-        <SpeedInsights />
-        <Analytics />
       </body>
     </html>
   );
