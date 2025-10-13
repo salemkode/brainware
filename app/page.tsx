@@ -1,21 +1,14 @@
+
+import { AnalyzeLogo } from "@/components/AnalyzeLogo";
 import {
   Button,
   Text,
   Card,
-  Avatar,
-  Badge,
 } from "@/components/retroui";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const members = [
-    { name: "Ahmed Ali", field: "AI & Data Science", avatar: "/images/avatar1.png" },
-    { name: "Sara Mohammed", field: "Cybersecurity", avatar: "/images/avatar2.png" },
-    { name: "Yousef Saleh", field: "Web Development", avatar: "/images/avatar3.png" },
-    { name: "Amani Khaled", field: "Mobile Apps", avatar: "/images/avatar4.png" },
-  ];
-
   const memories = [
     "/images/memory1.jpg",
     "/images/memory2.jpg",
@@ -25,8 +18,13 @@ export default function Home() {
   const facultyMessages = [
     {
       name: "د. سعيد بامطرف",
-      message:
-        "“دفعة Digital Brains أثبتت أن علوم الحاسوب ليست مجرد تخصص، بل أسلوب تفكير يربط بين المنطق والإبداع. أنتم العقول التي ترى النظام وسط الفوضى، وتحول الخوارزميات إلى حلول، والمعرفة إلى وعي رقمي متجدد. استمروا في البحث، فالعقول التي تُفكّر بالحاسوب، تُبدع للإنسان.”",
+      message: `دفعة Digital Brains اثبتت ان علوم الحاسوب ليست علماً فقط، بل فكراً وابداعاً ينبض بالحياة.`
+    },
+    {
+      name: "عبدالقادر باسلامة",
+      message: `دفعة Digital Brains كانت أكثر من مجرد مجموعة طلاب…
+كانت الشرارة التي جعلتني أدرك أن نقل المعرفة يمكن أن يكون متعة حقيقية، لا مجرد مهمة.
+تجربة غنية بالتفاعل والإبداع، تركت في نفسي أثرًا عميقًا.`
     }
   ];
 
@@ -90,25 +88,12 @@ export default function Home() {
         </section>
       </div>
 
-      {/* أعضاء الدفعة */}
-      <section id="members" className="container max-w-6xl mx-auto px-4 py-24">
-        <Text as="h2" className="text-3xl font-bold mb-12 text-center text-black">
-          أعضاء الدفعة
-        </Text>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {members.map((member) => (
-            <Card
-              key={member.name}
-              className="bg-background shadow-none border border-muted-foreground p-4 flex flex-col items-center"
-            >
-              <Avatar className="h-16 w-16 mb-2">
-                <Avatar.Image src={member.avatar} alt={member.name} />
-              </Avatar>
-              <Text className="font-semibold">{member.name}</Text>
-              <Badge className="mt-2">{member.field}</Badge>
-            </Card>
-          ))}
-        </div>
+      {/* قسم الشعار */}
+      <Text as="h2" className="text-3xl font-bold text-center text-gray-900 relative my-8">
+        تحليل الشعار
+      </Text>
+      <section className="container max-w-6xl mx-auto p-4 my-24 rounded-2xl px-4">
+        <AnalyzeLogo />
       </section>
 
       {/* رسائل الأساتذة */}
@@ -116,25 +101,11 @@ export default function Home() {
         <Text as="h2" className="text-3xl font-bold mb-12 text-center">
           رسائل من الأساتذة
         </Text>
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {facultyMessages.map((msg) => (
             <Card key={msg.name} className="bg-background shadow-none border border-muted-foreground p-6">
               <Text as="h3" className="font-semibold mb-2">{msg.name}</Text>
               <Text>{msg.message}</Text>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* قيم الدفعة */}
-      <section id="values" className="container max-w-5xl mx-auto px-4 py-24">
-        <Text as="h2" className="text-3xl font-bold mb-12 text-center">
-          قيمنا
-        </Text>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-          {coreValues.map((val) => (
-            <Card key={val.title} className={`bg-background shadow-none border border-muted-foreground p-6`}>
-              <Text className={`font-semibold ${val.color}`}>{val.title}</Text>
             </Card>
           ))}
         </div>

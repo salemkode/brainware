@@ -492,3 +492,7 @@ code.hljs {
   border-radius: 2px;
   transition: background 0.3s ease;
 }
+
+path {
+  transition: all 0.5s;
+}

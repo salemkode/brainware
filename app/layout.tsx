@@ -1,6 +1,6 @@
 import TopNav from "@/components/TopNav";
 import "./global.css";
-import { Archivo_Black, Space_Grotesk, Space_Mono, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -22,13 +22,7 @@ const ibm = IBM_Plex_Sans_Arabic({
   variable: "--font-head",
 })
 export const metadata: Metadata = {
-  title: "Retro Styled React UI Library | Retro UI",
-  description:
-    "RetroUI - Retro styled component library built with React and TailwindCSS for modern web apps.",
-  openGraph: {
-    images: "https://retroui.dev/banner.png",
-    title: "Retro Styled React UI Library | Retro UI",
-  },
+  title: "BrainWare",
 };
 
 export default function RootLayout({
@@ -39,24 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme');
-                  if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {
-                  console.error('Error applying theme:', e);
-                }
-              })();
-            `,
-          }}
-        />
       </head>
       <body
         className={`${ibm.variable} ${sans.variable} ${mono.variable} ${ibm.className} bg-background text-foreground`}

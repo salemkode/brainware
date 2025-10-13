@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <style>
+    .brain-path { fill: #0a4d70; }
+    .grad-cap { fill: #0a4d70; }
+    .circuit { fill: none; stroke: #0a4d70; stroke-width: 4; }
+    .code { fill: #0a4d70; font-family: monospace; font-size: 14px; }
+  </style>
+  <g transform="translate(50, 30)">
+    <!-- Graduation Cap -->
+    <path class="grad-cap" d="M100,20 L160,40 L100,60 L40,40 Z" />
+    <path class="grad-cap" d="M100,60 L100,80 M160,40 L160,70 L150,80" />
+    
+    <!-- Brain Outline -->
+    <path class="brain-path" d="M60,70 C40,90 40,130 60,150 C40,170 40,210 60,230 L140,230 C160,210 160,170 140,150 C160,130 160,90 140,70 Z" />
+    
+    <!-- Left Brain Details -->
+    <circle class="circuit" cx="80" cy="100" r="10" />
+    <circle class="circuit" cx="70" cy="130" r="8" />
+    <circle class="circuit" cx="90" cy="160" r="12" />
+    <circle class="circuit" cx="70" cy="190" r="10" />
+    <path class="circuit" d="M80,100 L70,130 L90,160 L70,190" />
+    
+    <!-- Right Brain Details -->
+    <text class="code" x="110" y="110">010</text>
+    <text class="code" x="110" y="140">111</text>
+    <text class="code" x="110" y="170">&lt;/&gt;</text>
+    <text class="code" x="110" y="200">101</text>
+  </g>
+</svg>

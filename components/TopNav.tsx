@@ -18,13 +18,13 @@ export default function TopNav() {
           {/* Logo Section */}
           <div className="text-black font-head text-2xl flex items-end">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="retro ui logo"
               className="mr-2"
               height={30}
               width={30}
             />
-            <div className="text-foreground">RetroUI</div>
+            <div className="text-foreground">BrainWare</div>
           </div>
         </div>
       </div>
