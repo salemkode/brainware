@@ -4,6 +4,9 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
+import { ConvexProvider, ConvexReactClient } from "convex/react";
+const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+
 interface ThemeContextType {
   theme: Theme;
   isDarkMode: boolean;
@@ -58,7 +61,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <ThemeContext.Provider value={value}>
-      {children}
+      <ConvexProvider client={convex}>{children} </ConvexProvider>
     </ThemeContext.Provider>
   );
 }

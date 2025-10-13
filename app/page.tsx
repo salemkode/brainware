@@ -1,5 +1,6 @@
 
 import { AnalyzeLogo } from "@/components/AnalyzeLogo";
+import { InputName } from "@/components/InputName";
 import {
   Button,
   Text,
@@ -18,21 +19,14 @@ export default function Home() {
   const facultyMessages = [
     {
       name: "د. سعيد بامطرف",
-      message: `دفعة Digital Brains اثبتت ان علوم الحاسوب ليست علماً فقط، بل فكراً وابداعاً ينبض بالحياة.`
+      message: `دفعة BrainWare اثبتت ان علوم الحاسوب ليست علماً فقط، بل فكراً وابداعاً ينبض بالحياة.`
     },
     {
       name: "عبدالقادر باسلامة",
-      message: `دفعة Digital Brains كانت أكثر من مجرد مجموعة طلاب…
+      message: `دفعة BrainWare كانت أكثر من مجرد مجموعة طلاب…
 كانت الشرارة التي جعلتني أدرك أن نقل المعرفة يمكن أن يكون متعة حقيقية، لا مجرد مهمة.
 تجربة غنية بالتفاعل والإبداع، تركت في نفسي أثرًا عميقًا.`
     }
-  ];
-
-  const coreValues = [
-    { title: "الإبداع", color: "bg-violet-600" },
-    { title: "التعاون", color: "bg-blue-600" },
-    { title: "الفضول", color: "bg-green-600" },
-    { title: "الاحترافية", color: "bg-orange-600" },
   ];
 
   return (
@@ -61,7 +55,7 @@ export default function Home() {
             من نحن؟
           </Text>
           <Text className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-            نحن دفعة Digital Brains، طلاب علوم الحاسوب في جامعة سيئون،
+            نحن دفعة BrainWare، طلاب علوم الحاسوب في جامعة سيئون،
             نجمع بين الشغف بالتقنية، التفكير الإبداعي، والعمل الجماعي لبناء مستقبل رقمي.
           </Text>
         </section>
@@ -110,6 +104,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <InputName />
     </main>
   );
 }
