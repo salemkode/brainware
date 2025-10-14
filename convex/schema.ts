@@ -5,4 +5,7 @@ export default defineSchema({
     names: defineTable({
       body: v.string()
     }),
+    isEnabled: defineTable({
+        enabled: v.boolean()
+    })
   });

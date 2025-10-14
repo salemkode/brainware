@@ -15,10 +15,11 @@ export const ColoredIcon: React.FC<ColoredIconProps> = ({
     yellowColored = "#FFAA1C"
 }) => {
     return (
-        <svg
+        <div className="p-4"><svg
             id="Layer_1"
             width={350.19388}
             height={478.16931}
+            className="scale-90"
         >
             <g id="g30" transform="translate(-218.17474,-58.42)">
                 <path
@@ -179,7 +180,7 @@ export const ColoredIcon: React.FC<ColoredIconProps> = ({
                     />
                 </g>
             </g>
-        </svg>
+        </svg></div>
     );
 
 }

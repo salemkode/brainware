@@ -17,3 +17,9 @@ export const setName = mutation({
     });
   },
 });
+
+export const isEnabled = query({
+    handler: async (ctx) => {
+        return !!(await ctx.db.query("isEnabled").first())
+    }
+})

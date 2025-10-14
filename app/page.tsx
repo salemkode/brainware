@@ -1,3 +1,4 @@
+'use client';
 
 import { AnalyzeLogo } from "@/components/AnalyzeLogo";
 import { InputName } from "@/components/InputName";
@@ -7,13 +8,12 @@ import {
   Card,
 } from "@/components/retroui";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   const memories = [
-    "/images/memory1.jpg",
-    "/images/memory2.jpg",
-    "/images/memory3.jpg",
+    "/images/memory1.webp",
+    "/images/memory2.webp",
+    "/images/memory3.webp",
   ];
 
   const facultyMessages = [
@@ -29,6 +29,16 @@ export default function Home() {
     }
   ];
 
+  const scroll = () => {
+    try {
+      document.querySelector("#about")?.scrollIntoView({
+        behavior: "smooth"
+      })
+    } catch {
+
+    }
+  }
+
   return (
     <main dir="rtl">
       {/* الصفحة الرئيسية */}
@@ -42,9 +52,7 @@ export default function Home() {
               دفعة علوم الحاسوب التي تجمع بين الإبداع، التقنية، والذكاء الاصطناعي.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center">
-              <Link href="#about">
-                <Button variant="default" className="w-full sm:w-auto">تعرف علينا</Button>
-              </Link>
+              <Button variant="default" className="w-full sm:w-auto" onClick={scroll}>تعرف علينا</Button>
             </div>
           </div>
         </section>
@@ -55,8 +63,9 @@ export default function Home() {
             من نحن؟
           </Text>
           <Text className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-            نحن دفعة BrainWare، طلاب علوم الحاسوب في جامعة سيئون،
-            نجمع بين الشغف بالتقنية، التفكير الإبداعي، والعمل الجماعي لبناء مستقبل رقمي.
+            🎓 دفعة BrainWare – الدفعة الثامنة، كلية الحاسبات، جامعة سيئون
+            نحن طلاب علوم الحاسوب، نحمل شغفًا لا ينطفئ بالتقنية، ونؤمن بأن الإبداع هو لغة المستقبل.
+            في دفعة BrainWare جمعنا بين الفكر، والابتكار، والعمل الجماعي، لنكون جيلًا يسهم في بناء مستقبل رقمي أكثر ذكاءً وإنسانية.
           </Text>
         </section>
 
