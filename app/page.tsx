@@ -1,7 +1,6 @@
 'use client';
 
 import { AnalyzeLogo } from "@/components/AnalyzeLogo";
-import { InputName } from "@/components/InputName";
 import {
   Button,
   Text,
@@ -113,8 +112,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <InputName />
     </main>
   );
 }

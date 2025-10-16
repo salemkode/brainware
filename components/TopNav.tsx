@@ -1,16 +1,8 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, GithubIcon, MoonIcon, SunIcon } from "lucide-react";
-import HamburgerMenu from "./HamburgerMenu";
-import { Button, Text } from "@/components/retroui";
-import { navConfig } from "@/config/navigation";
-import { useTheme } from "@/contexts/ThemeContext";
 
 export default function TopNav() {
-  const { isDarkMode, toggleTheme } = useTheme();
-
   return (
     <nav className="sticky z-10 top-0 right-0 w-full border-b-2 bg-background">
       <div className="container max-w-6xl px-4 lg:px-0 mx-auto">

@@ -2,7 +2,6 @@ import TopNav from "@/components/TopNav";
 import "./global.css";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Metadata } from "next";
-import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const sans = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
@@ -38,10 +37,8 @@ export default function RootLayout({
       <body
         className={`${ibm.variable} ${sans.variable} ${mono.variable} ${ibm.className} bg-background text-foreground`}
       >
-        <ThemeProvider>
-          <TopNav />
-          {children}
-        </ThemeProvider>
+        <TopNav />
+        {children}
       </body>
     </html>
   );
